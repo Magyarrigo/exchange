@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CurrencyConverter</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerContainer">
+        <img class="logo" src="assets/logo-magyarrigo.svg" />
+        <p class="projectTitle">CurrencyConverter</p>
+        <nav class="navContainer">
+          <ul class="navContainerButtons">
+            <li class="navContainerElement">
+              <a href="#converter" class="navContainerLink">CONVERTER</a>
+            </li>
+            <li class="navContainerElement">
+              <a href="#description" class="navContainerLink">DESCRIPTION</a>
+            </li>
+            <li class="navContainerElement">
+              <a href="#aboutMe" class="navContainerLink">ABOUTME</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mainContainer" id="description">
+      <div class="descriptionContainer sectionContainer">
+        <h2 class="descriptionTitle" id="descriptionTitle">
+          Jak korzystać z kalkulatora
+        </h2>
+        <p class="descriptionContent">
+          Korzystając z tego prostego kalkulatora możesz przeliczyć wartość
+          wybranej waluty na polską złotówkę. Wystarczy wpisać jaką ilość
+          odpowiedniej waluty chcemy przeliczyć na złotego oraz dokonać wyboru
+          waluty - a automatycznie pojawi się wynik. Przeliczenie jest
+          dokonywane na podstawie aktualnej Tabeli Kursów Narodowego Banku
+          Polskiego, według kursu średniego.
+        </p>
+
+        <p class="descriptionContent">
+          Należy pamiętać, że wartość sprzedaży lub zakupu może odbiegać od
+          kursu średniego.
+        </p>
+
+        <p class="descriptionContent">
+          Obsługiwane waluty to: USD- dolar amerykański, CHF - frank
+          szwajcarski, EUR -euro.
+        </p>
+
+        <p class="descriptionContent">
+          Korzystanie z kalkulatora jest proste i bardzo przejrzyste.
+        </p>
+      </div>
+
+      <div class="sectionContainer" id="converter">
+        <div class="formContainer">
+          <form class="dataEntryForm" id="converterForm">
+            <div class="dataEntryField">
+              <label for="amount" class="labelClass">wpisz wartosc</label>
+              <input
+                name="amount"
+                class="dataField"
+                type="text"
+                id="inputAmount"
+              />
+            </div>
+
+            <div class="dataEntryField">
+              <label for="currencyName" class="labelClass"
+                >wybierz walute</label
+              >
+              <select name="currencyName" class="dataField" id="selectCurrency">
+                <option value="EUR">EUR</option>
+                <option value="CHF">CHF</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+
+            <div class="dataEntryField">
+              <label for="requestButton" class="labelClass"
+                >nacisnij poniżej</label
+              >
+
+              <button
+                type="submit"
+                name="requestButton"
+                class="dataField"
+                id="askForCurrences"
+              >
+                PRZELICZ
+              </button>
+            </div>
+
+            <div class="resultField">
+              <label for="conversionResult" class="labelClass"
+                >wartość waluty</label
+              >
+              <div
+                name="conversionResult"
+                class="conversionResult dataField"
+                id="conversionResult"
+              >
+                TO: WYNIK PLN
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="aboutMe sectionContainer" id="aboutMe">
+        <div class="aboutMeMyPicture aboutMeSection">
+          <div class="aboutMe__myPicture--cirkle"></div>
+        </div>
+        <div class="aboutMeMyCV aboutMeSection">
+          <h2 class="aboutMeTitle" id="about">MOJE KRÓTKIE CV</h2>
+          <p class="aboutMeContent">
+            Jestem absolwentem Politechniki Budapeszteńskiej uzyskując tytuł
+            magistra inżyniera Energetyki Jądrwoej. Już od czasów studiów
+            interesowałem się programowaniem. W ubiegłym roku szczególną uwagę
+            poświęciłem tworzeniu stron internetowych. Rozpocząłem naukę języka
+            angielskiego. Ukończyłem kurs "Frontend Developer" w CODERSLAB oraz
+            "Javascript and React" w FUTURE COLLARS.
+          </p>
+
+          <p class="aboutMeContent">
+            Znajomość języków obcych: język węgierski - biegła w mowie i piśmie,
+            język rosyjski - bardzo dobra w mowie i piśmie, język angielski -
+            poziom B2, język niemiecki - poziom B2.
+          </p>
+          <p class="aboutMeContent">
+            Moim językiem ojczystm jest język polski.
+          </p>
+
+          <p class="aboutMeContent">
+            Z przyjemnością odpowiem na wszystkie ewentualne pytania.
+          </p>
+
+          <p class="aboutMeContent">
+            Jestem sympatykiem koszykówki oraz biegania. Przez ponad 25 lat
+            byłem sędzią koszykówki. Na koncie mam ukończone biegi maratońskie.
+            Mój najlepszy rezultat to 2 godziny 50 minut.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="contact">
+      <div class="footerContainer">
+        <div>
+          <img class="logoAtFooter" src="./assets/logo-magyarrigo.svg" />
+        </div>
+        <div class="footerContainerButtons">
+          <a class="footerButton" href="#description">DESCRIPTION</a>
+          <a class="footerButton" href="#converter">CONVERTER</a>
+        </div>
+
+        <div class="footerContainerContact">
+          <div class="meansOfContact" id="phone">
+            <img src="./assets/phone.svg" />
+            <p>+48 535 092 608</p>
+          </div>
+          <div class="meansOfContact" id="mail">
+            <img src="./assets/mail.svg" />
+            <p>b.drozd07@gmail.com</p>
+          </div>
+        </div>
+        <div class="footerContainerMediaIcons">
+          <img src="./assets/Twitter.svg" />
+          <img src="./assets/Facebook.svg" />
+          <img class="tiktokIcon" id="tiktok" src="./assets/Tiktok.jpg" />
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

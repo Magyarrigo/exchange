@@ -1,0 +1,238 @@
+:root {
+  --color-primary: rgba(3, 3, 196);
+  --color-primary-shadow: rgba(0, 128, 0, 0.26);
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey: #b6b5b5;
+  --color-grey-light: #e9e9e9;
+  --color-grey-medium: #e1e2e3;
+  --color-title: var(--color-primary);
+  --color-button: var(--color-primary);
+
+  --button-radius: 35px;
+  --containerWidth: 1352px;
+  --font-open-sans: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-open-sans);
+  background-color: var(--color-grey);
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-family: var(--font-open-sans);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: var(--containerWidth);
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 6px var(--color-primary-shadow);
+}
+.headerContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: var(--color-grey);
+}
+.logo {
+  height: 100%;
+  width: 20%;
+  padding-left: 0.5%;
+}
+.projectTitle {
+  position: relative;
+  width: 20%;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--color-title);
+}
+.navContainer {
+  width: 35%;
+  right: 1em;
+}
+.navContainerButtons {
+  right: 1em;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+.navContainerElement {
+  padding: 0 1em;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+.navContainerLink {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  padding: 28px 18px 22px;
+  border-bottom: 4px solid transparent;
+  letter-spacing: 0.1875rem;
+}
+.navContainerLink:hover {
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
+.mainContainer {
+  padding-top: 70px;
+  position: relative;
+}
+.sectionContainer {
+  background-color: var(--color-grey-medium);
+  min-height: 300px;
+  border: var(--color-primary) 2px solid;
+  border-radius: 10px;
+}
+.descriptionTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 700;
+  color: var(--color-primary);
+  padding-top: 1em;
+}
+.descriptionContent {
+  padding: 1.5em 3em 0 3em;
+  letter-spacing: 2px;
+}
+.formContainer {
+  margin-top: 100px;
+}
+.dataEntryForm {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 100px;
+}
+.dataField {
+  background-color: var(--color-grey-light);
+  border-radius: 15px;
+  border: solid 2px var(--color-primary);
+  height: 100%;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+.conversionResult {
+  background-color: var(--color-grey);
+  font-size: large;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.dataEntryField {
+  height: 70px;
+  width: 20%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resultField {
+  height: 70px;
+  width: 25%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.labelClass {
+  height: 50px;
+  text-align: center;
+}
+.aboutMe {
+  padding-bottom: 33px;
+  display: flex;
+}
+.aboutMeSection {
+  min-height: 300px;
+  border: var(--color-primary) 2px solid;
+  border-radius: 10px;
+}
+.aboutMeMyPicture {
+  width: 20%;
+  background-image: url("/assets/Photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.aboutMeMyCV {
+  width: 80%;
+}
+.aboutMeTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 700;
+  color: var(--color-primary);
+  padding-top: 1em;
+}
+.aboutMeContent {
+  padding: 1.5em 3em 1.5em 3em;
+  letter-spacing: 2px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  box-shadow: 0 3px 6px var(--color-primary-shadow);
+}
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.logoAtFooter {
+  height: 28px;
+}
+.footerContainerButtons {
+  width: 40%;
+  justify-content: space-between;
+}
+.footerButton {
+  color: var(--color-white);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.footerContainerContact {
+  display: flex;
+}
+.meansOfContact {
+  display: flex;
+  padding-right: 1em;
+  padding-left: 1em;
+  align-items: center;
+  color: var(--color-white);
+}
+.footerContainerMediaIcons {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.tiktokIcon {
+  border-radius: 50%;
+}
