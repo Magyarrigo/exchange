@@ -8,8 +8,6 @@
   --color-grey-medium: #e1e2e3;
   --color-title: var(--color-primary);
   --color-button: var(--color-primary);
-
-  --button-radius: 35px;
   --containerWidth: 1352px;
   --font-open-sans: "Open Sans", sans-serif;
 }
