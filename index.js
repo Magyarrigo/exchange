@@ -14,26 +14,33 @@ function getCurrencyListByAxios(event) {
     clearForm();
     return;
   }
-
   const currencyCode = event.target.currencyName.value;
-
   axios
     .get(link)
     .then((response) => {
-      const currencyList = response.data[0].rates;
-
+      const currencyList = response?.data?.[0]?.rates;
+      if (!currencyList) {
+        alert(
+          "niespodziewany błąd podczas pobierania danych - ponów próbę później"
+        );
+        clearForm();
+        return;
+      }
       const targetCurrency = currencyList.filter((element) => {
         return element.code === currencyCode;
       });
-
-      const targetCurrencyRate = targetCurrency[0].mid;
-
+      const targetCurrencyRate = targetCurrency?.[0]?.mid;
+      if (!targetCurrencyRate) {
+        alert(
+          "niespodziewany błąd podczas pobierania danych - ponów próbę później"
+        );
+        clearForm();
+        return;
+      }
       let resultText = currencyConversion(targetCurrencyRate, amount);
       resultText = parseFloat(resultText).toFixed(2);
-
       exchangeResult.innerText = `to: ${resultText} zł`;
     })
-
     .catch((error) => alert(error));
 }
 
